@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9718EEB2-ED8F-4EA1-BBCE-3C784583495D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Publications</RootNamespace>
+    <AssemblyName>Publications</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Graphicloads-100-Flat-2-Email.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp, Version=4.1.2.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="publicationsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>publicationsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="publicationsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>publicationsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="publicationsDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>publicationsDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="publicationsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>publicationsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="publicationsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>publicationsDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="publicationsDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>publicationsDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="publicationsDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>publicationsDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="publicationsDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>publicationsDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ІндексиНаселенихПунктів.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ІндексиНаселенихПунктів.Designer.cs">
+      <DependentUpon>ІндексиНаселенихПунктів.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ІнформаціяПроПередоплатника.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ІнформаціяПроПередоплатника.Designer.cs">
+      <DependentUpon>ІнформаціяПроПередоплатника.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Авторизація.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Авторизація.Designer.cs">
+      <DependentUpon>Авторизація.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Довідники.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Довідники.Designer.cs">
+      <DependentUpon>Довідники.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ДодатиІндексиНаселенихПунктів.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ДодатиІндексиНаселенихПунктів.Designer.cs">
+      <DependentUpon>ДодатиІндексиНаселенихПунктів.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ДодатиІнформаціяПроПередоплатників1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ДодатиІнформаціяПроПередоплатників1.Designer.cs">
+      <DependentUpon>ДодатиІнформаціяПроПередоплатників1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ДодатиКаталогВидань.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ДодатиКаталогВидань.Designer.cs">
+      <DependentUpon>ДодатиКаталогВидань.cs</DependentUpon>
+    </Compile>
+    <Compile Include="КаталогВидань.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="КаталогВидань.Designer.cs">
+      <DependentUpon>КаталогВидань.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ПрийняттяПредоплати.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ПрийняттяПредоплати.Designer.cs">
+      <DependentUpon>ПрийняттяПредоплати.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ПроПрограму.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ПроПрограму.Designer.cs">
+      <DependentUpon>ПроПрограму.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ІндексиНаселенихПунктів.resx">
+      <DependentUpon>ІндексиНаселенихПунктів.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ІнформаціяПроПередоплатника.resx">
+      <DependentUpon>ІнформаціяПроПередоплатника.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Авторизація.resx">
+      <DependentUpon>Авторизація.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Довідники.resx">
+      <DependentUpon>Довідники.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ДодатиІндексиНаселенихПунктів.resx">
+      <DependentUpon>ДодатиІндексиНаселенихПунктів.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ДодатиІнформаціяПроПередоплатників1.resx">
+      <DependentUpon>ДодатиІнформаціяПроПередоплатників1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ДодатиКаталогВидань.resx">
+      <DependentUpon>ДодатиКаталогВидань.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="КаталогВидань.resx">
+      <DependentUpon>КаталогВидань.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ПрийняттяПредоплати.resx">
+      <DependentUpon>ПрийняттяПредоплати.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ПроПрограму.resx">
+      <DependentUpon>ПроПрограму.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="publicationsDataSet.xsc">
+      <DependentUpon>publicationsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>publicationsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="publicationsDataSet.xss">
+      <DependentUpon>publicationsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet1.xsc">
+      <DependentUpon>publicationsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>publicationsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="publicationsDataSet1.xss">
+      <DependentUpon>publicationsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet2.xsc">
+      <DependentUpon>publicationsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>publicationsDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="publicationsDataSet2.xss">
+      <DependentUpon>publicationsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet3.xsc">
+      <DependentUpon>publicationsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>publicationsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="publicationsDataSet3.xss">
+      <DependentUpon>publicationsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet4.xsc">
+      <DependentUpon>publicationsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>publicationsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="publicationsDataSet4.xss">
+      <DependentUpon>publicationsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet5.xsc">
+      <DependentUpon>publicationsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>publicationsDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="publicationsDataSet5.xss">
+      <DependentUpon>publicationsDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet6.xsc">
+      <DependentUpon>publicationsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>publicationsDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="publicationsDataSet6.xss">
+      <DependentUpon>publicationsDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet7.xsc">
+      <DependentUpon>publicationsDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="publicationsDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>publicationsDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="publicationsDataSet7.xss">
+      <DependentUpon>publicationsDataSet7.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Graphicloads-100-Flat-2-Email.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
