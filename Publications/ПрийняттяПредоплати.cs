@@ -255,29 +255,52 @@ namespace Publications
             if (ВидПослуги.SelectedItem != null)
             {
 
-                if (ВидПослуги.SelectedItem.ToString().Trim() == "Купівля")
+                if (ВидПослуги.SelectedItem.ToString().Trim() == "Купівля" || ВидПослуги.SelectedItem.ToString().Trim() == "Передоплата")
                 {
-                    a = "Купівля";
-                    b = "-";
-                    flag = true;
-                    if (Індекс.SelectedItem != null || Назва.SelectedItem != null)
-                    {
+                  
+                    if (ВидПослуги.SelectedItem.ToString().Trim() == "Купівля") {
+                        a = "Купівля";
+                        b = "-";
                         flag = true;
-                        if (КількістьКупівля.Text == "")
+                        if (Індекс.SelectedItem != null || Назва.SelectedItem != null)
                         {
-                            КількістьКупівля.Text = "1";
+                            flag = true;
+                            if (КількістьКупівля.Text == "")
+                            {
+                                КількістьКупівля.Text = "1";
+                            }
+                            else
+                            {
+                                suma = Convert.ToDouble(ВартістьВидання.Text) * Convert.ToDouble(КількістьКупівля.Text);
+                                ЗагальнаВартість.Text = suma.ToString();
+                            }
+
+                        }
+                    }
+                    
+                    
+                    if (ВидПослуги.SelectedItem.ToString().Trim() == "Передоплата")
+                    {
+                        if (ВидПередоплати.SelectedItem != null)
+                        {
+                            a = "Передоплата";
+                            b = ВидПередоплати.SelectedItem.ToString().Trim();
+                            flag = true;
                         }
                         else
                         {
-                            suma = Convert.ToDouble(ВартістьВидання.Text) * Convert.ToDouble(КількістьКупівля.Text);
-                            ЗагальнаВартість.Text = suma.ToString();
+                            flag = false;
+
+                            MessageBox.Show("Виберіть вид передоплати!");
                         }
-                       
+
                     }
-                    else {
+                    if (Індекс.SelectedItem == null || Назва.SelectedItem == null)
+                    {
                         flag = false;
                         MessageBox.Show("Виберіть видання!");
                     }
+
                     if (flag &&(
                        (Країна.Text != "") &&
                        (Прізвище.Text != "") &&
@@ -308,25 +331,12 @@ namespace Publications
                 MessageBox.Show("Виберіть вид послуги!");
             }
             
-                if (flag && ВидПослуги.SelectedItem.ToString().Trim() == "Передоплата") {
-                    if (ВидПередоплати.SelectedItem != null)
-                    {
-                        a = "Передоплата";
-                        b = ВидПередоплати.SelectedItem.ToString().Trim();
-                        flag = true;
-                    }
-                    else {
-                        flag = false;
-
-                        MessageBox.Show("Виберіть вид передоплати!");
-                    }
-                    
-                }
+            
             if (flag && ВидПослуги.SelectedItem.ToString().Trim() == "Купівля") {
                //------------------------------------------------------------------------------------------
                 string idPreroplaty ="";
                 string idPreroplatnika = "";
-                string sql = "INSERT INTO Передоплата(ДатаПочатку, ДатаКінця, КількістьКомплектів, Розбиття) VALUES('" + ДатаПочатку.Value.ToShortDateString() + "','" + ДатаКінця.Value.ToShortDateString() + "','" + КількістьКупівля.Text +   "','" +1+ "')";
+                string sql = "INSERT INTO Передоплата(ДатаПочатку, ДатаКінця, КількістьКомплектів, Розбиття) VALUES('" + ДатаПочатку.Value.ToString("yyyyMMdd") + "','" + ДатаКінця.Value.ToString("yyyyMMdd") + "','" + КількістьКупівля.Text +   "','" +1+ "')";
                 connect.Open();
                 adapter.InsertCommand = new OleDbCommand(sql, connect);
                 adapter.InsertCommand.ExecuteNonQuery();
@@ -464,7 +474,7 @@ namespace Publications
 
 
                 }
-                string sql = "INSERT INTO Передоплата(ДатаПочатку, ДатаКінця, КількістьКомплектів, Розбиття) VALUES('" + ДатаПочатку.Value.ToShortDateString() + "','" + ДатаКінця.Value.ToShortDateString() + "','" + Кількість.Text + "','" + rozbitya + "')";
+                string sql = "INSERT INTO Передоплата(ДатаПочатку, ДатаКінця, КількістьКомплектів, Розбиття) VALUES('" + ДатаПочатку.Value.ToString("yyyyMMdd") + "','" + ДатаКінця.Value.ToString("yyyyMMdd") + "','" + Кількість.Text + "','" + rozbitya + "')";
                 connect.Open();
                 adapter.InsertCommand = new OleDbCommand(sql, connect);
                 adapter.InsertCommand.ExecuteNonQuery();
@@ -581,7 +591,7 @@ namespace Publications
             }
             else {
                 flag = false;
-                MessageBox.Show("!!!!!!!!!!!!!");
+               
             }
            
         }

@@ -22,7 +22,6 @@ C:\Users\bbere\source\repos\Publications\Publications\obj\Debug\Publications.csp
 C:\Users\bbere\source\repos\Publications\Post_Soft_1\Publications\bin\Debug\Publications.exe.config
 C:\Users\bbere\source\repos\Publications\Post_Soft_1\Publications\bin\Debug\Publications.exe
 C:\Users\bbere\source\repos\Publications\Post_Soft_1\Publications\bin\Debug\Publications.pdb
-C:\Users\bbere\source\repos\Publications\Post_Soft_1\Publications\obj\Debug\Publications.csprojResolveAssemblyReference.cache
 C:\Users\bbere\source\repos\Publications\Post_Soft_1\Publications\obj\Debug\Publications.frmMenu.resources
 C:\Users\bbere\source\repos\Publications\Post_Soft_1\Publications\obj\Debug\Publications.Properties.Resources.resources
 C:\Users\bbere\source\repos\Publications\Post_Soft_1\Publications\obj\Debug\Publications.ІндексиНаселенихПунктів.resources

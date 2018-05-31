@@ -47,12 +47,10 @@
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.інформаціяПроПередоплатниківBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.publicationsDataSet1 = new Publications.publicationsDataSet5();
-            this.інформаціяПроПередоплатниківBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.інформаціяПроПередоплатниківTableAdapter = new Publications.publicationsDataSet5TableAdapters.ІнформаціяПроПередоплатниківTableAdapter();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.пІПDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.країнаDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,12 +61,14 @@
             this.корпусDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.квартираDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.номерТелефонуDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.textBoxSearch = new System.Windows.Forms.TextBox();
+            this.інформаціяПроПередоплатниківTableAdapter = new Publications.publicationsDataSet5TableAdapters.ІнформаціяПроПередоплатниківTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.інформаціяПроПередоплатниківBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.publicationsDataSet1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.інформаціяПроПередоплатниківBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // button2
@@ -163,7 +163,7 @@
             this.bindingNavigatorPositionItem.AutoSize = false;
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
+            this.bindingNavigatorPositionItem.Text = "1";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
             // bindingNavigatorCountItem
@@ -248,6 +248,21 @@
             this.bindingNavigator1.TabIndex = 1;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
+            // інформаціяПроПередоплатниківBindingSource
+            // 
+            this.інформаціяПроПередоплатниківBindingSource.DataMember = "ІнформаціяПроПередоплатників";
+            this.інформаціяПроПередоплатниківBindingSource.DataSource = this.bindingSource1;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = this.publicationsDataSet1;
+            this.bindingSource1.Position = 0;
+            // 
+            // publicationsDataSet1
+            // 
+            this.publicationsDataSet1.DataSetName = "publicationsDataSet1";
+            this.publicationsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
@@ -270,34 +285,6 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(896, 385);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // textBoxSearch
-            // 
-            this.textBoxSearch.Location = new System.Drawing.Point(0, 28);
-            this.textBoxSearch.Name = "textBoxSearch";
-            this.textBoxSearch.Size = new System.Drawing.Size(128, 20);
-            this.textBoxSearch.TabIndex = 19;
-            this.textBoxSearch.Text = "ПІП";
-            this.textBoxSearch.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxSearch_MouseClick);
-            // 
-            // bindingSource1
-            // 
-            this.bindingSource1.DataSource = this.publicationsDataSet1;
-            this.bindingSource1.Position = 0;
-            // 
-            // publicationsDataSet1
-            // 
-            this.publicationsDataSet1.DataSetName = "publicationsDataSet1";
-            this.publicationsDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // інформаціяПроПередоплатниківBindingSource
-            // 
-            this.інформаціяПроПередоплатниківBindingSource.DataMember = "ІнформаціяПроПередоплатників";
-            this.інформаціяПроПередоплатниківBindingSource.DataSource = this.bindingSource1;
-            // 
-            // інформаціяПроПередоплатниківTableAdapter
-            // 
-            this.інформаціяПроПередоплатниківTableAdapter.ClearBeforeFill = true;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -360,6 +347,19 @@
             this.номерТелефонуDataGridViewTextBoxColumn.HeaderText = "НомерТелефону";
             this.номерТелефонуDataGridViewTextBoxColumn.Name = "номерТелефонуDataGridViewTextBoxColumn";
             // 
+            // textBoxSearch
+            // 
+            this.textBoxSearch.Location = new System.Drawing.Point(0, 28);
+            this.textBoxSearch.Name = "textBoxSearch";
+            this.textBoxSearch.Size = new System.Drawing.Size(128, 20);
+            this.textBoxSearch.TabIndex = 19;
+            this.textBoxSearch.Text = "ПІП";
+            this.textBoxSearch.MouseClick += new System.Windows.Forms.MouseEventHandler(this.textBoxSearch_MouseClick);
+            // 
+            // інформаціяПроПередоплатниківTableAdapter
+            // 
+            this.інформаціяПроПередоплатниківTableAdapter.ClearBeforeFill = true;
+            // 
             // ІнформаціяПроПередоплатника
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -380,10 +380,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.інформаціяПроПередоплатниківBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.publicationsDataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.інформаціяПроПередоплатниківBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

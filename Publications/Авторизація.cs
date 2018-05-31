@@ -36,9 +36,6 @@ namespace Publications
                     this.Hide();
                     objFrmUser.Show();
                 }
-              
-                
-
             }
             else
             {
